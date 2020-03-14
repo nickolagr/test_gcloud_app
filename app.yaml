@@ -1,6 +1,5 @@
 runtime: nodejs10
 instance_class: F4_1G
-api_version: 1
 
 
 handlers:
