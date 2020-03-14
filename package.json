@@ -28,6 +28,6 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">= 4.5.0"
+    "node": ">= 9.0.0"
   }
 }
