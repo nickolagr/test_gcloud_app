@@ -3,5 +3,5 @@ instance_class: F4_1G
 
 
 handlers:
-- url: .*
+- url: auto
   script: app.js
