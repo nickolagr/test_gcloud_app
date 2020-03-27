@@ -12,7 +12,7 @@ const connect = () => {
   config.host = `/cloudsql/northern-music-270914:europe-west1:app-db`;
 
   // Establish a connection to the database
-  const knex = Knex({
+  const knex = require("knex")({
     client: 'pg',
     connection: config,
   });
