@@ -8,6 +8,6 @@ steps:
   entrypoint: npm
   args: ['install']
 # Run app
-- name: run 
+- name: node 
   entrypoint: node
   args: ["app", "start"]
