@@ -1,7 +1,7 @@
 const { Client } = require('pg');
 
 client = new Client({
-    host: '/cloudsql/northern-music-270914:europe-west1:app-db'
+    host: '/cloudsql/northern-music-270914:europe-west1:app-db/.s.PGSQL.5432'
     // user: 'username',
     // password: 'password',
     // database: 'database_name',
