@@ -1,9 +1,9 @@
+steps:
 #install node
 - name: node
   entrypoint: npm
   args: ['install']
 #deploy step
-steps:
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
   timeout: 600s
