@@ -1,11 +1,18 @@
 const { Client } = require('pg');
-var connectionString = "/cloudsql/northern-music-270914:europe-west1:app-db";
+
+client = new Client({
+    host: '/cloudsql/northern-music-270914:europe-west1:app-db'
+    // user: 'username',
+    // password: 'password',
+    // database: 'database_name',
+});
+
 // default connectionString
 // var connectionString = "postgres://postgres:root@localhost:5432/database";
 
-const client = new Client({
-    connectionString: connectionString
-});
+// const client = new Client({
+//     connectionString: connectionString
+// });
 
 client.connect();
 
