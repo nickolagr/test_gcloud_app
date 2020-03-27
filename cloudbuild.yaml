@@ -10,4 +10,4 @@ steps:
 # Run app
 - name: node
   entrypoint: npm
-  args: ['app']
+  args: ["app", "start"]
