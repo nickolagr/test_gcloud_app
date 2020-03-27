@@ -4,9 +4,9 @@ const connect = () => {
   // Remember - storing secrets in plaintext is potentially unsafe. Consider using
   // something like https://cloud.google.com/kms/ to help keep secrets secret.
   const config = {
-    user: process.env.postgres, // e.g. 'my-user'
-    password: process.env.postgres, // e.g. 'my-user-password'
-    database: process.env.customer, // e.g. 'my-database'
+    user: process.env.DB_USER, // e.g. 'my-user'
+    password: process.env.DB_PASS, // e.g. 'my-user-password'
+    database: process.env.DB_NAME, // e.g. 'my-database'
   };
 
   config.host = `/cloudsql/northern-music-270914:europe-west1:app-db`;
