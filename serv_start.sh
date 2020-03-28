@@ -1,2 +1,2 @@
  #!/bin/bash
- echo | nohup node app.js &
+ echo | sudo nohup node app.js &
