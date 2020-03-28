@@ -3,14 +3,3 @@ steps:
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
   timeout: 600s
-#install node
-- name: node
-  entrypoint: npm
-  args: ['install']
-- name: 'ubuntu'
-  entrypoint: 'bash'
-  args: ['-c', './serv_start.sh']
-# # Run app
-# - name: node 
-#   entrypoint: node
-#   args: ["app", "start"]
