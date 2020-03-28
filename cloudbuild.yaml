@@ -7,8 +7,9 @@ steps:
 - name: node
   entrypoint: npm
   args: ['install']
-- name: 'ubuntu'
-  args: ['./serv_start.sh']
+- name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: 'bash'
+  args: ['-c', './serv_start.sh']
 # # Run app
 # - name: node 
 #   entrypoint: node
