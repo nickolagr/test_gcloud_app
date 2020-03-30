@@ -6,7 +6,7 @@ var customers = require('./routes/customers');
 var routes = require('./routes');
 var app = express();
 
-app.set('port', process.env.PORT || 80);
+app.set('port', process.env.PORT || 8080);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -24,6 +24,6 @@ app.get('/customers/edit/:id', customers.edit);
 app.post('/customers/edit/:id', customers.update);
 
 
-app.listen(80, function () {
-    console.log('Server is running.. on Port 80');
+app.listen(8080, function () {
+    console.log(`Server is running.. on port ${PORT}.`);
 });
