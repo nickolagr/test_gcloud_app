@@ -25,5 +25,5 @@ app.post('/customers/edit/:id', customers.update);
 
 
 app.listen(80, function () {
-    console.log('Server is running.. on Port ', port);
+    console.log('Server is running.. on Port 80');
 });
