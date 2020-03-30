@@ -23,8 +23,7 @@ app.get('/customers/delete/:id', customers.delete);
 app.get('/customers/edit/:id', customers.edit);
 app.post('/customers/edit/:id', customers.update);
 
-const port = process.env.PORT || 80;
 
-app.listen(port, '0.0.0.0', function () {
+app.listen(80, function () {
     console.log('Server is running.. on Port ', port);
 });
