@@ -32,6 +32,6 @@
     "node": ">9.0"
   },
   "scripts": {
-    "start": "PORT=4000 node app.js"
+    "start": "PORT=80 node app.js"
 }
 }
