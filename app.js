@@ -25,6 +25,6 @@ app.post('/customers/edit/:id', customers.update);
 
 const port = process.env.PORT || 4000;
 
-app.listen(port, function () {
+app.listen(port, '0.0.0.0', function () {
     console.log('Server is running.. on Port ', port);
 });
