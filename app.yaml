@@ -2,5 +2,3 @@ runtime: nodejs10
 instance_class: F4_1G
 beta_settings:
   cloud_sql_instances: "northern-music-270914:europe-west4:for-app-test=tcp:5432"
-env_variables:
-  PORT: 4000
