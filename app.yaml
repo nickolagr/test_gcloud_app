@@ -1,2 +1,8 @@
 runtime: nodejs10
 instance_class: F4_1G
+env_variables:
+  DB_USER: postgres
+  DB_PASS: postgres
+  DB_NAME: postgres
+  # e.g. my-awesome-project:us-central1:my-cloud-sql-instance
+  CLOUD_SQL_INSTANCE_NAME: northern-music-270914:us-west1:app-db-test

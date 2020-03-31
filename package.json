@@ -32,6 +32,6 @@
     "node": ">9.0"
   },
   "scripts": {
-    "start": "PORT=8080 node app.js"
+    "start": "node app.js"
 }
 }
