@@ -1,3 +1,4 @@
+const Knex = require('knex');
 // [START cloud_sql_postgres_knex_create]
 // Initialize Knex, a Node.js SQL query builder library with built-in connection pooling.
 const connect = () => {
