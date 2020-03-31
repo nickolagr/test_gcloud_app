@@ -14,18 +14,21 @@ const connect = () => {
   config.host = `/cloudsql/${process.env.CLOUD_SQL_CONNECTION_NAME}`;
 
   // Establish a connection to the database
-  const knex = Knex({
+  const { Client } = require('pg');
+  
+  const client = new Client ({
     client: 'pg',
     connection: config,
   });
-  return knex;
+  
 };
-const knex = connect();
+
+client.connect();
 
 
 exports.list = function (req, res) {
 
-    knex.query('SELECT * FROM customer', function (err, result) {
+    client.query('SELECT * FROM customer', function (err, result) {
         if (err) {
             console.log(err);
             res.status(400).send(err);
@@ -43,7 +46,7 @@ exports.edit = function (req, res) {
 
     var id = req.params.id;
 
-    knex.query('SELECT * FROM customer WHERE id=$1', [id], function (err, result) {
+    client.query('SELECT * FROM customer WHERE id=$1', [id], function (err, result) {
         if (err) {
             console.log(err);
             res.status(400).send(err);
@@ -57,7 +60,7 @@ exports.save = function (req, res) {
 
     var cols = [req.body.name, req.body.address, req.body.email, req.body.phone];
 
-    knex.query('INSERT INTO customer(name, address, email, phone) VALUES($1, $2, $3, $4) RETURNING *', cols, function (err, result) {
+    client.query('INSERT INTO customer(name, address, email, phone) VALUES($1, $2, $3, $4) RETURNING *', cols, function (err, result) {
         if (err) {
             console.log("Error Saving : %s ", err);
         }
@@ -70,7 +73,7 @@ exports.update = function (req, res) {
 
     var cols = [req.body.name, req.body.address, req.body.email, req.body.phone, req.params.id];
 
-    knex.query('UPDATE customer SET name=$1, address=$2,email=$3, phone=$4 WHERE id=$5', cols, function (err, result) {
+    client.query('UPDATE customer SET name=$1, address=$2,email=$3, phone=$4 WHERE id=$5', cols, function (err, result) {
         if (err) {
             console.log("Error Updating : %s ", err);
         }
@@ -83,7 +86,7 @@ exports.delete = function (req, res) {
 
     var id = req.params.id;
 
-    knex.query("DELETE FROM customer WHERE id=$1", [id], function (err, rows) {
+    client.query("DELETE FROM customer WHERE id=$1", [id], function (err, rows) {
         if (err) {
             console.log("Error deleting : %s ", err);
         }
