@@ -26,7 +26,6 @@ const connect = () => {
 
 const client = connect();
 
-
 exports.list = function (req, res) {
 
     client.query('SELECT * FROM customer', function (err, result) {
