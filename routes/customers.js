@@ -20,10 +20,11 @@ const connect = () => {
     client: 'pg',
     connection: config,
   });
+  return client;
   
 };
 
-client.connect();
+const client = connect();
 
 
 exports.list = function (req, res) {
