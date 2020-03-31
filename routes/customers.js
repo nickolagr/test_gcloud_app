@@ -1,5 +1,5 @@
-const Knex = require('knex');
-
+// [START cloud_sql_postgres_knex_create]
+// Initialize Knex, a Node.js SQL query builder library with built-in connection pooling.
 const connect = () => {
   // Configure which instance and what database user to connect with.
   // Remember - storing secrets in plaintext is potentially unsafe. Consider using
@@ -10,13 +10,15 @@ const connect = () => {
     database: process.env.DB_NAME, // e.g. 'my-database'
   };
 
-config.host = `/cloudsql/${process.env.CLOUD_SQL_CONNECTION_NAME}`;
+  config.host = `/cloudsql/${process.env.CLOUD_SQL_CONNECTION_NAME}`;
+
   // Establish a connection to the database
   const knex = Knex({
     client: 'pg',
     connection: config,
   });
-
+  return knex;
+};
 const knex = connect();
 
 exports.list = function (req, res) {
