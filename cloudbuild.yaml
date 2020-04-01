@@ -3,6 +3,7 @@ steps:
   args: ['cp', 'gs://$_BUCKET/app.yaml', 'html/app.yaml']
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy', 'html/']
+  timeout: 600s
 ## steps:
 # #deploy step
 # - name: "gcr.io/cloud-builders/gcloud"
