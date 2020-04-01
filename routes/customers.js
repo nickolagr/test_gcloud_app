@@ -1,6 +1,6 @@
 const { Client } = require('pg');
 client = new Client({
-    host: `/cloudsql/${process.env.CLOUD_SQL_CONNECTION_NAME}`,
+    host: '/cloudsql/northern-music-270914:us-west1:app-db-test',
     user: process.env.DB_USER, // e.g. 'my-user'
     password: process.env.DB_PASS, // e.g. 'my-user-password'
     database: process.env.DB_NAME, // e.g. 'my-database'
