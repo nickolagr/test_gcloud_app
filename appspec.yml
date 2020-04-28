@@ -1,0 +1,7 @@
+version: 0.0
+os: linux
+files:
+  - source: app.js
+    destination: /webapps/Config
+  - source: source
+    destination: /webapps/myApp
