@@ -4,3 +4,8 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/www
+hooks:
+  AfterInstall:
+    - location: scripts/start.sh
+      timeout: 180
+      runas: codedeployuser
