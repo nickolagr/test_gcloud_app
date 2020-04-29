@@ -5,7 +5,7 @@ files:
   - source: /
     destination: /home/ubuntu/www
 hooks:
-  AfterInstall:
+  ApplicationStart:
     - location: scripts/start.sh
       timeout: 180
       runas: root
