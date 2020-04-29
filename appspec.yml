@@ -8,4 +8,4 @@ hooks:
   AfterInstall:
     - location: scripts/start.sh
       timeout: 180
-      runas: codedeployuser
+      runas: root
