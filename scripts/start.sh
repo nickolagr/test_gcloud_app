@@ -1,3 +1,4 @@
+#!/bin/bash
 cd ~/www
 sudo npm install
 nohup node app.js &
