@@ -6,12 +6,6 @@ files:
     destination: /home/ubuntu/www
 hooks:
   ApplicationStart:
-    - location: scripts/start.sh
+    - location: scripts/start
       timeout: 180
       runas: root
-permissions:
-  - object: /home/ubuntu/www/scripts
-    pattern: "*.sh"
-    mode: 777
-    type:
-      - file
