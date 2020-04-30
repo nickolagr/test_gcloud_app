@@ -9,7 +9,7 @@ Learn how to create a Simple Crud Application by Connecting PostgreSQL with Node
 
 ## Folder Structure
 
-Within the download you'll find the following directories and files:
+Within the download you'll find the following directories and files :
 ```
 NodeJs & PostgreSQL Crud Application
 .
