@@ -6,6 +6,6 @@ files:
     destination: /home/ubuntu/www
 hooks:
   ApplicationStart:
-    - location: scripts/start
+    - location: scripts/start.sh
       timeout: 180
       runas: root
