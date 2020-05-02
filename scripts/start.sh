@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ~/www
+cd /home/ubuntu/www
 sudo npm install
 nohup node app.js &
 sudo systemctl restart nginx
