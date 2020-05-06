@@ -5,6 +5,10 @@ files:
   - source: /
     destination: /home/ubuntu/www
 hooks:
+  ApplicationStop:
+    - location: scripts/stop.sh
+      timeout: 180
+      runas: root
   ApplicationStart:
     - location: scripts/start.sh
       timeout: 180

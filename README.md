@@ -1,4 +1,4 @@
-# [Sample app based on NodeJs + PostgreSQL to test dploy in GCP and AWS]
+# [Sample app based on NodeJs + PostgreSQL to test deploy in GCP and AWS]
 
 ## NodeJs & PostgreSQL Crud Application (https://github.com/dannibla/nodejs-postgresql-crud)
 
