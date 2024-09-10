@@ -21,7 +21,7 @@
   "main": "app.js",
   "dependencies": {
     "body-parser": "^1.20.1",
-    "express": "^4.19.2",
+    "express": "^4.20.0",
     "ejs": "^3.1.10",
     "knex": "^2.4.0",
     "path": "^0.12.7",
